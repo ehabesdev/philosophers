@@ -6,7 +6,7 @@
 /*   By: ehabes <ehabes@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 19:50:46 by ehabes            #+#    #+#             */
-/*   Updated: 2025/05/03 12:03:18 by ehabes           ###   ########.fr       */
+/*   Updated: 2025/05/03 15:48:22 by ehabes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,10 @@ int	main(int argc, char **argv)
 	}
 	if (!start_threads(&simulation_data))
 	{
+		cleanup_simulation(&simulation_data);
 		return (1);
 	}
+	monitor_simulation(&simulation_data);
 	if (!join_threads(&simulation_data))
 	{
 		return (1);

@@ -5,7 +5,8 @@ CFLAGS = -Wall -Wextra -Werror -pthread
 RM = rm -f
 
 SRC_FILES = philo.c utils.c args.c time_utils.c init.c \
-			philo_routine.c cleanup.c simulation.c actions.c
+			philo_routine.c cleanup.c simulation.c actions.c \
+			status_utils.c monitoring.c
 
 SRCS_DIR = src
 SRCS = $(addprefix $(SRCS_DIR)/, $(SRC_FILES))

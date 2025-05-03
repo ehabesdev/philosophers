@@ -6,7 +6,7 @@
 /*   By: ehabes <ehabes@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 20:38:41 by ehabes            #+#    #+#             */
-/*   Updated: 2025/05/03 12:44:33 by ehabes           ###   ########.fr       */
+/*   Updated: 2025/05/03 16:32:48 by ehabes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,8 @@ int					parse_and_validate_args(int argc, char **argv, \
 
 // time_utils.c
 unsigned long long	get_current_time_ms(void);
-void				precise_usleep(unsigned long long duration_ms);
+void				precise_usleep(t_sim_data *data, \
+									unsigned long long duration_ms);
 
 // init.c
 int					init_simulation(t_sim_data *data);
@@ -95,5 +96,18 @@ int					join_threads(t_sim_data *data);
 
 // cleanup.c
 void				cleanup_simulation(t_sim_data *data);
+
+// actions.c
+int					take_forks(t_philo *philo);
+void				eat(t_philo *philo);
+void				sleep_philo(t_philo *philo);
+void				think(t_philo *philo);
+
+// status_utils.c
+int					check_stop_flag(t_sim_data *data);
+void				print_status(t_philo *philo, t_philo_status status);
+
+// monitoring.c
+void				monitor_simulation(t_sim_data *data);
 
 #endif

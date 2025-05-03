@@ -6,7 +6,7 @@
 /*   By: ehabes <ehabes@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 00:41:47 by ehabes            #+#    #+#             */
-/*   Updated: 2025/05/03 01:30:52 by ehabes           ###   ########.fr       */
+/*   Updated: 2025/05/03 17:16:57 by ehabes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ unsigned long long	get_current_time_ms(void)
 	return (time_in_ms);
 }
 
-void	precise_usleep(unsigned long long duration_ms)
+void	precise_usleep(t_sim_data *data, \
+						unsigned long long duration_ms)
 {
 	unsigned long long	start_time;
 	unsigned long long	target_time;
@@ -34,5 +35,9 @@ void	precise_usleep(unsigned long long duration_ms)
 		return ;
 	target_time = start_time + duration_ms;
 	while (get_current_time_ms() < target_time)
+	{
+		if (check_stop_flag(data))
+			break ;
 		usleep(500);
+	}
 }

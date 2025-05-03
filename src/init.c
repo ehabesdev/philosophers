@@ -6,7 +6,7 @@
 /*   By: ehabes <ehabes@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 03:04:50 by ehabes            #+#    #+#             */
-/*   Updated: 2025/05/03 03:55:57 by ehabes           ###   ########.fr       */
+/*   Updated: 2025/05/03 13:08:08 by ehabes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,8 +72,6 @@ int	init_simulation(t_sim_data *data)
 	if (!init_mutexes(data))
 		return (0);
 	if (!init_philosophers(data))
-	{
 		return (0);
-	}
 	return (1);
 }

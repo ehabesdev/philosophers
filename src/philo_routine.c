@@ -6,11 +6,25 @@
 /*   By: ehabes <ehabes@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 11:33:15 by ehabes            #+#    #+#             */
-/*   Updated: 2025/05/03 12:45:15 by ehabes           ###   ########.fr       */
+/*   Updated: 2025/05/03 17:16:14 by ehabes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/philo.h"
+
+static int	run_life_cycle(t_philo *philo)
+{
+	if (!take_forks(philo))
+		return (0);
+	eat(philo);
+	if (check_stop_flag(philo->sim_data))
+		return (0);
+	sleep_philo(philo);
+	if (check_stop_flag(philo->sim_data))
+		return (0);
+	think(philo);
+	return (1);
+}
 
 void	*philosopher_routine(void *arg)
 {
@@ -19,9 +33,19 @@ void	*philosopher_routine(void *arg)
 
 	philo = (t_philo *)arg;
 	data = philo->sim_data;
-	pthread_mutex_lock(&data->print_mutex);
-	printf("%llu %d is thinking\n", get_current_time_ms() - data->start_time, \
-		philo->id);
-	pthread_mutex_unlock(&data->print_mutex);
+	if (data->num_philos == 1)
+	{
+		print_status(philo, TAKEN_FORK);
+		while (!check_stop_flag(philo->sim_data))
+			precise_usleep(data, philo->sim_data->time_die);
+		return (NULL);
+	}
+	if (philo->id % 2 == 0)
+		precise_usleep(data, 1);
+	while (!check_stop_flag(data))
+	{
+		if (!run_life_cycle(philo))
+			break ;
+	}
 	return (NULL);
 }
