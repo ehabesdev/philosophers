@@ -6,7 +6,7 @@
 /*   By: ehabes <ehabes@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 00:41:47 by ehabes            #+#    #+#             */
-/*   Updated: 2025/05/03 17:16:57 by ehabes           ###   ########.fr       */
+/*   Updated: 2025/05/04 05:18:19 by ehabes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,6 @@ void	precise_usleep(t_sim_data *data, \
 	{
 		if (check_stop_flag(data))
 			break ;
-		usleep(500);
+		usleep(100);
 	}
 }

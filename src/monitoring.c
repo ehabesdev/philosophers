@@ -6,7 +6,7 @@
 /*   By: ehabes <ehabes@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 14:33:33 by ehabes            #+#    #+#             */
-/*   Updated: 2025/05/03 18:10:33 by ehabes           ###   ########.fr       */
+/*   Updated: 2025/05/04 06:26:30 by ehabes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ static int	is_philosopher_dead(t_philo *philo)
 	{
 		if (try_set_stop_flag_on_death(data))
 			return (print_status(philo, DIED), 1);
+		if (check_stop_flag(data))
+			return (1);
 	}
 	return (0);
 }

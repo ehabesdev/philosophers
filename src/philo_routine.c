@@ -6,11 +6,20 @@
 /*   By: ehabes <ehabes@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 11:33:15 by ehabes            #+#    #+#             */
-/*   Updated: 2025/05/03 17:16:14 by ehabes           ###   ########.fr       */
+/*   Updated: 2025/05/04 06:25:51 by ehabes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/philo.h"
+
+static void	handle_single_philo(t_philo *philo)
+{
+	t_sim_data	*data;
+
+	data = philo->sim_data;
+	print_status(philo, TAKEN_FORK);
+	precise_usleep(data, data->time_die);
+}
 
 static int	run_life_cycle(t_philo *philo)
 {
@@ -35,9 +44,7 @@ void	*philosopher_routine(void *arg)
 	data = philo->sim_data;
 	if (data->num_philos == 1)
 	{
-		print_status(philo, TAKEN_FORK);
-		while (!check_stop_flag(philo->sim_data))
-			precise_usleep(data, philo->sim_data->time_die);
+		handle_single_philo(philo);
 		return (NULL);
 	}
 	if (philo->id % 2 == 0)
