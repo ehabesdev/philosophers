@@ -189,7 +189,7 @@ Eğer bir 42 öğrencisiyseniz, bu projenin zorlukları ve öğrenme süreci hak
 * Bu problemi daha önce çözmüş ve deneyimlerini paylaşmış olan tüm geliştiricilere.
 * Açık kaynak topluluğuna ve C dilinin sunduğu güçlü araçlara.
 
-Proje ile ilgili herhangi bir geri bildiriminiz, sorunuz veya öneriniz varsa, lütfen [GitHub kullanıcı adınız veya iletişim bilgileriniz] üzerinden bana ulaşmaktan çekinmeyin.
+Proje ile ilgili herhangi bir geri bildiriminiz, sorunuz veya öneriniz varsa, lütfen @ehabesdev veya habes.emirhanifi@gmail.com üzerinden bana ulaşmaktan çekinmeyin.
 
 Afiyet olsun ve kodlamaya devam! 🚀
 
