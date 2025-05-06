@@ -1,4 +1,4 @@
-# 🍽️ Philosophers: Bir 42 Kocaeli Projesi 🧠
+# 🍽️ Philosophers: Bir Senkronizasyon Senfonisi 🧠
 
 [![Dil](https://img.shields.io/badge/Dil-C-00599C.svg?style=for-the-badge&logo=c)](https://en.wikipedia.org/wiki/C_(programming_language))
 [![Okul](https://img.shields.io/badge/Okul-42%20Kocaeli-000000.svg?style=for-the-badge&logo=42)](https://www.42kocaeli.com.tr)
