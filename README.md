@@ -189,7 +189,15 @@ Eğer bir 42 öğrencisiyseniz, bu projenin zorlukları ve öğrenme süreci hak
 * Bu problemi daha önce çözmüş ve deneyimlerini paylaşmış olan tüm geliştiricilere.
 * Açık kaynak topluluğuna ve C dilinin sunduğu güçlü araçlara.
 
-Proje ile ilgili herhangi bir geri bildiriminiz, sorunuz veya öneriniz varsa, lütfen @ehabesdev veya habes.emirhanifi@gmail.com üzerinden bana ulaşmaktan çekinmeyin.
+
+**Bu Projeyle İlgili Soru ve Geri Bildirimleriniz İçin:**
+
+Proje hakkında herhangi bir sorunuz, hata bildirimi, özellik isteğiniz veya genel bir geri bildiriminiz varsa, lütfen bu GitHub deposunun aşağıdaki bölümlerini kullanmaktan çekinmeyin:
+
+* 👉 **[Issues Bölümü](https://github.com/ehabesdev/philosophers/issues):** Hataları bildirmek, soru sormak veya yeni özellikler önermek için idealdir.
+
+Eğer GitHub profilimde herkese açık bir e-posta adresim bulunuyorsa, oradan da genel konular için ulaşabilirsiniz. Ancak projeye özel konular için yukarıdaki depo bazlı iletişim kanallarını tercih etmeniz, takibi kolaylaştıracaktır.
+
 
 Afiyet olsun ve kodlamaya devam! 🚀
 
