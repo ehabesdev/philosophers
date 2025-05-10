@@ -6,7 +6,7 @@
 /*   By: ehabes <ehabes@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 20:38:41 by ehabes            #+#    #+#             */
-/*   Updated: 2025/05/03 16:32:48 by ehabes           ###   ########.fr       */
+/*   Updated: 2025/05/10 01:27:07 by ehabes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,9 @@ positive and greater than 0"
 # define ERR_MUTEX_INIT "Mutex initialization failed"
 # define ERR_THREAD_CREATE "Thread creation failed"
 # define ERR_THREAD_JOIN "Thread join failed"
+# define ERR_TIME_EAT "Number of eat time must be greater than 60"
+# define ERR_TIME_SLEEP "Number of sleep time must be greater than 60"
+# define ERR_TIME_DIE "Number of die time must be greater than 60"
 
 typedef struct s_sim_data	t_sim_data;
 
