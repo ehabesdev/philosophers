@@ -21,10 +21,7 @@ int	main(int argc, char **argv)
 	if (!init_simulation(&simulation_data))
 		return (1);
 	if (!start_threads(&simulation_data))
-	{
-		cleanup_simulation(&simulation_data);
-		return (1);
-	}
+		return (cleanup_simulation(&simulation_data), 1);
 	monitor_simulation(&simulation_data);
 	if (!join_threads(&simulation_data))
 		return (1);
